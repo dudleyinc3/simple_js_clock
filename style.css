@@ -1,9 +1,10 @@
 html {
-	background: #018ded url(./images/pexels_skyscraper.jpeg);
+	background: #018ded url(./images/pexels_skyscraper.jpeg) no-repeat;
 	background-size: cover;
-	font-family: serif;
+	font-family: 'Oswald', serif;
 	text-align: center;
 	font-size: 10px;
+	letter-spacing: 1.4px;
 }
 
 body {
@@ -11,22 +12,32 @@ body {
 	display: flex;
 	flex: 1;
 	min-height: 100vh;
-	align-items: center;
+	
 }
+
+#quote {
+	text-align: center;
+	color: orange;
+	position: absolute;
+	width: 100%;
+	max-height: 200px;
+	top: 500px;
+	color: orange;
+	text-shadow: 2px 2px 4px red;
+	text-align: center;
+}
+
 
 .clock {
 	width: 30rem;
 	height: 30rem;
-	border: 10px solid black;
+	border: 19px solid black;
 	border-radius: 50%;
 	margin: 50px auto;
 	position: relative;
 	padding: 2rem;
-	box-shadow: 
-		0 0 0px 4px red,
-		inset 0 0 0 3px #efefef,
-		inset 0 0 10 black,
-		0 0 10px blue;
+	box-shadow: inset 0 0 25px 6px blue;
+	
 }
 
 .clock-face {
@@ -38,9 +49,15 @@ body {
 
 .hand {
 	width: 50%;
-	height: 3px;
+	height: 5px;
+	border-radius: 7px;
 	background: orange;
+	box-shadow: -1px 0 black, 0 1px black, 5px 0 black, 0 -1px black;
 	position: absolute;
 	top: 50%;
+	transform-origin: 100%;
+	transform: rotate(90deg);
+	transform: all 0.05s;
+	transition-timing-function: cubic-bezier(0.02, 0.91, 1, 1.04);
 }
 
